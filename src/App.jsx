@@ -32,7 +32,7 @@ function App() {
                 </div>
             </section>
             <div class="text-area">
-                {/* <TextSubmission /> */}
+                <TextSubmission />
             </div>
             <section class="section">
                 <div class="box-main">

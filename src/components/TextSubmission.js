@@ -24,27 +24,27 @@ export default function TextArea() {
     event.preventDefault();
 
     console.log({documents:[text1, text2]})
-    // Axios.post("http://localhost:3000/plagiarism/compare").then(
-    //   (Response) => {setResponse(Response)}).catch(err => {
-    //       console.log(err);
-    //   })
+    Axios.post("http://localhost:3000/plagiarism/compare", {documents:[text1, text2]}).then(
+      (Response) => {setResponse(Response)}).catch(err => {
+          console.log(err);
+      })
   }
   
   return (
     <form>
       <div>
         <label style={AreaStyle.label}></label>
-        {/* <textarea style={AreaStyle.textarea} rows={40} cols={50} value={text1} onChange={handleChange1}/> */}
+        <textarea style={AreaStyle.textarea} rows={40} cols={50} value={text1} onChange={handleChange1}/>
 
         <label style={AreaStyle.label}></label>
-        {/* <textarea style={AreaStyle.textarea} rows={40} cols={50} value={text2} onChange={handleChange2}/> */}
+        <textarea style={AreaStyle.textarea} rows={40} cols={50} value={text2} onChange={handleChange2}/>
       </div>
 
       <div>
-        {/* <button id="button" onClick={handleSubmit}>Compare</button> */}
+        <button id="button" onClick={handleSubmit}>Compare</button>
       </div>
       <div>
-        {/* <Response props={ response }></Response> */}
+        <Response sentences={ response.sentences } paragraphs={ response.paragraphs } overallsimilarityScore={ response.overallsimilarityScore } ></Response>
       </div>
     </form>
 

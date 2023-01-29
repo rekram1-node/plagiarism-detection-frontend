@@ -1,20 +1,11 @@
 import React from "react";
 
-const props = {
-
-}
-
-function Response(props) {
+function Response(sentences,paragraphs,overallsimilarityScore ) {
     return(
         <>
             <div>
-                { props.sentences }
-            </div>
-            <div>
-                { props.paragraphs }
-            </div>
-            <div>
-                { props.overallsimilarityScore }
+            {sentences}
+
             </div>
         </>
     )
