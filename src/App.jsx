@@ -5,6 +5,10 @@ import { useState } from 'react';
 import Axios from 'axios';
 
 
+const handleClick = () => {
+  alert("Hello World")
+}
+
 function App() {
 
     const [response, setResponse] = useState("")
@@ -19,20 +23,16 @@ function App() {
 
     return (
         <div>
-            <nav class="navbar background">
+            <nav class="navbar background" id="nav_background">
                 <ul class="nav-list">
                     <div class="logo">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png" alt="burger"/>
+                        <img src={"https://cdn-icons-png.flaticon.com/512/1905/1905047.png"} alt="logo"/>
                     </div>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#tutorials">Tutorials</a></li>
-                    <li><a href="#jobs">Jobs</a></li>
-                    <li><a href='#student'>Student</a></li>
+                    <li><a href="https://github.com/rekram1-node/plagiarism-detection-backend">Documentation</a></li>
                 </ul>
   
                 <div class="rightNav">
-                    <input type="text" name="search" id="search" />
-                    <button class="btn btn-sm">Search</button>
+                    
                 </div>
             </nav>
   
@@ -48,42 +48,32 @@ function App() {
                     </div>
                 </div>
             </section>
-            <TextSubmission />
+            <div class="text-area">
+                <TextSubmission />
+            </div>
+            <div id="button">
+              <Button label="Compare" handleClick={handleClick}></Button>
+            </div>
+
             <section class="section">
                 <div class="box-main">
                     <div class="secondHalf">
-                        <h1 class="text-big" id="program">
-                            Java Programming Language
-                        </h1>
-                            { response && <p class="text-small">{ response }</p> }
+                        
                     </div>
                 </div>
             </section>
+
             <section class="section">
                 <div class="box-main">
                     <div class="secondHalf">
-                        <h1 class="text-big" id="program">
-                            What is Machine Learning?
-                        </h1>
-                        <p class="text-small">
-                            Machine Learning is the field of study 
-                            that gives computers the capability to 
-                            learn without being explicitly 
-                            programmed. ML is one of the most exciting
-                            technologies that one would have ever 
-                            come across. As it is evident from the 
-                            name, it gives the computer that makes 
-                            it more similar to humans: The ability 
-                            to learn. Machine learning is actively 
-                            being used today, perhaps in many more 
-                            places than one would expect.
-                        </p>
+                        
                     </div>
                 </div>
             </section>
+
             <footer className="footer">
                 <p className="text-footer">
-                    Copyright ©-All rights are reserved
+                    Made by Aiden Cline, David Herring, Justin Herring, and Kieran Kahler
                 </p>
             </footer>
         </div>
