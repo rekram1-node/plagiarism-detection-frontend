@@ -5,6 +5,7 @@ const AreaStyle = {
     }, textarea: {
         resize: "none",
         padding: "30px"
+        
     }
 };
 

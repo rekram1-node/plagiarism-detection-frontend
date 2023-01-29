@@ -1,7 +1,8 @@
 import React from 'react';
 
 const buttonStyle = {
-  margin: '0px 0'
+  margin: '20px 0'
+
 };
 
 const Button = ({ label, handleClick }) => (
