@@ -1,11 +1,6 @@
 import React from 'react';
 import './App.css';
-import Button from './components/Button';
-import TextArea from './components/Textarea';
-
-const handleClick = () => {
-  alert("Hello World")
-}
+import TextSubmission from './components/TextSubmission'
 
 function App() {
     return (
@@ -39,13 +34,7 @@ function App() {
                     </div>
                 </div>
             </section>
-            <div class="text-area">
-              <TextArea></TextArea>
-              <TextArea></TextArea>
-            </div>
-            <div>
-              <Button label="Compare" handleClick={handleClick}></Button>
-            </div>
+            <TextSubmission />
             <section class="section">
                 <div class="box-main">
                     <div class="secondHalf">
