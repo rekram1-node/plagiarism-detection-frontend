@@ -1,15 +1,9 @@
 import React from 'react';
 import './App.css';
-<<<<<<< HEAD:src/App.jsx
-import Button from './components/Button';
-import TextArea from './components/Textarea';
+import TextSubmission from './components/TextSubmission';
 import { useState } from 'react';
 import Axios from 'axios';
 
-
-=======
-import TextSubmission from './components/TextSubmission'
->>>>>>> origin/stateful-textarea:src/App.js
 
 function App() {
 
@@ -54,17 +48,7 @@ function App() {
                     </div>
                 </div>
             </section>
-<<<<<<< HEAD:src/App.jsx
-            <div class="text-area">
-              <TextArea></TextArea>
-              <TextArea></TextArea>
-            </div>
-            <div class="button">
-              <Button handleClick={getResponse}>Compare</Button>
-            </div>
-=======
             <TextSubmission />
->>>>>>> origin/stateful-textarea:src/App.js
             <section class="section">
                 <div class="box-main">
                     <div class="secondHalf">
