@@ -1,25 +1,8 @@
 import React from 'react';
 import './App.css';
 import TextSubmission from './components/TextSubmission';
-import { useState } from 'react';
-import Axios from 'axios';
-
-
-const handleClick = () => {
-  alert("Hello World")
-}
 
 function App() {
-
-    const [response, setResponse] = useState("")
-
-    const getResponse = () => {
-        Axios.get("http://localhost:3000/plagiarism/compare").then(
-            (Response) => {setResponse(Response)}).catch(err => {
-                console.log(err);
-                setResponse(Response)
-            })
-    }
 
     return (
         <div>
@@ -49,16 +32,11 @@ function App() {
                 </div>
             </section>
             <div class="text-area">
-                <TextSubmission />
+                {/* <TextSubmission /> */}
             </div>
-            <div id="button">
-              <Button label="Compare" handleClick={handleClick}></Button>
-            </div>
-
             <section class="section">
                 <div class="box-main">
                     <div class="secondHalf">
-                        
                     </div>
                 </div>
             </section>
