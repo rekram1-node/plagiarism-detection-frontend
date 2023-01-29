@@ -142,3 +142,11 @@ background-color: #000;
     justify-content: center;
     color: #fff;
 }
+
+.text-area {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: rgb(250, 250, 250);
+
+}

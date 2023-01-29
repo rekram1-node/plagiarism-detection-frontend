@@ -1,5 +1,11 @@
 import React from 'react';
 import './App.css';
+import Button from './components/Button';
+import TextArea from './components/Textarea';
+
+const handleClick = () => {
+  alert("Hello World")
+}
 
 function App() {
     return (
@@ -7,7 +13,7 @@ function App() {
             <nav class="navbar background">
                 <ul class="nav-list">
                     <div class="logo">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png" />
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png" alt="burger"/>
                     </div>
                     <li><a href="#courses">Courses</a></li>
                     <li><a href="#tutorials">Tutorials</a></li>
@@ -25,26 +31,21 @@ function App() {
                 <div class="box-main">
                     <div class="firstHalf">
                         <h1 class="text-big">
-                            Text Big 1
+                            Plagiarism Detector
                         </h1>
                         <p class="text-small">
-                           Text Small 1
+                          Paste Passages into the text boxes below.
                         </p>
                     </div>
                 </div>
             </section>
-            <section class="section">
-                <div class="box-main">
-                    <div class="secondHalf">
-                        <h1 class="text-big" id="program">
-                            Text Big 2
-                        </h1>
-                        <p class="text-small">
-                            Text Small 2
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <div class="text-area">
+              <TextArea></TextArea>
+              <TextArea></TextArea>
+            </div>
+            <div>
+              <Button label="Compare" handleClick={handleClick}></Button>
+            </div>
             <section class="section">
                 <div class="box-main">
                     <div class="secondHalf">
